@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
+<style>
+body{text-align:center;font-family:Arial;background:#ffe6ee;padding-top:100px}
+.card{background:white;padding:30px;border-radius:25px;margin:auto;width:80%}
+button{padding:12px 25px;margin:10px;border:0;border-radius:15px;font-size:18px}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<div class="card">
+<div id="s1">
+<h1>💖 Aap mujhe achhi lagti ho?</h1>
+<button onclick="show('s2')">Haan ❤️</button>
+</div>
+
+<div id="s2" class="hidden">
+<h1>🥰 Tum cute ho!</h1>
+<button onclick="show('s3')">Next ❤️</button>
+</div>
+
+<div id="s3" class="hidden">
+<h1>❤️ I LIKE YOU ❤️</h1>
+</div>
+</div>
+
+<script>
+function show(id){
+document.querySelectorAll('.card>div').forEach(x=>x.classList.add('hidden'));
+document.getElementById(id).classList.remove('hidden');
+}
+</script>
+</body>
+</html>
